@@ -1,0 +1,146 @@
+{
+    "打开游戏": {
+        "action": "StartApp",
+        "package": "com.dff.rppprd/com.dff.sdk.PlatformActivity",
+        "post_delay": 90000,
+        "timeout": 100000
+    },
+    "关闭游戏": {
+        "action": "StopApp",
+        "package": "com.dff.rppprd"
+    },
+    "关闭游戏_sub": {
+        "action": "StopApp",
+        "package": "com.dff.rppprd",
+        "is_sub": true
+    },
+    "重启游戏_sub": {
+        "next": [
+            "检测icon判断是否关闭游戏_sub",
+            "打开游戏直到进入主界面"
+        ],
+        "is_sub": true
+    },
+    "重启游戏": {
+        "next": [
+            "检测icon判断是否关闭游戏_sub",
+            "打开游戏直到进入主界面"
+        ]
+    },
+    "检测icon判断是否关闭游戏_sub": {
+        "recognition": "TemplateMatch",
+        "template": "星神少女.png",
+        "inverse": true,
+        "next": [
+            "关闭游戏"
+        ],
+        "is_sub": true
+    },
+    "检测icon判断是否打开游戏_sub": {
+        "recognition": "TemplateMatch",
+        "template": "星神少女.png",
+        "next": [
+            "打开游戏"
+        ],
+        "is_sub": true
+    },
+    "打开游戏直到进入主界面": {
+        "next": [
+            "检测icon判断是否打开游戏_sub",
+            "登录游戏直到进入主界面"
+        ]
+    },
+    "登录游戏直到进入主界面": {
+        "next": [
+            "检测主界面图标",
+            "检测关闭图标并点击_sub",
+            "检测登入奖励并关闭_sub",
+            "检测点击选服并继续_sub",
+            "检测游戏公告并关闭_sub",
+            "检测档案更新并更新_sub",
+            "等待5秒max6_sub"
+        ]
+    },
+    "检测主界面图标": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            1074,
+            0,
+            206,
+            153
+        ],
+        "template": "主界面图标.png",
+        "green_mask": true
+    },
+    "检测点击选服并继续_sub": {
+        "recognition": "OCR",
+        "expected": "点击选服",
+        "next": [
+            "TAP_TO_START"
+        ],
+        "is_sub": true
+    },
+    "TAP_TO_START": {
+        "action": "Click",
+        "target": [
+            599,
+            638,
+            92,
+            18
+        ],
+        "post_delay": 10000,
+        "timeout": 11000
+    },
+    "检测游戏公告并关闭_sub": {
+        "recognition": "OCR",
+        "expected": "游戏公告",
+        "action": "Click",
+        "target": [
+            1106,
+            67,
+            44,
+            42
+        ],
+        "is_sub": true
+    },
+    "检测档案更新并更新_sub": {
+        "recognition": "OCR",
+        "expected": "档案更新",
+        "next": [
+            "点击确认"
+        ],
+        "is_sub": true,
+        "post_delay": 30000,
+        "timeout": 35000
+    },
+    "点击确认": {
+        "recognition": "OCR",
+        "expected": "确认",
+        "action": "Click"
+    },
+    "等待5秒max6_sub": {
+        "pre_delay": 5000,
+        "times_limit": 6,
+        "runout_next": [
+            "重启游戏"
+        ],
+        "is_sub": true
+    },
+    "检测登入奖励并关闭_sub": {
+        "recognition": "OCR",
+        "expected": "登入奖励",
+        "next": [
+            "关闭登入奖励"
+        ],
+        "is_sub": true
+    },
+    "关闭登入奖励": {
+        "action": "Click",
+        "target": [
+            1203,
+            36,
+            42,
+            41
+        ]
+    }
+}

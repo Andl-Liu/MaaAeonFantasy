@@ -3,73 +3,92 @@
         {
             "name": "安卓端",
             "type": "Adb"
-        },
-        {
-            "name": "桌面端",
-            "type": "Win32",
-            "win32": {
-                "method": "Search",
-                "class_name": ".*",
-                "window_name": "Visual Studio"
-            }
         }
     ],
     "resource": [
         {
-            "name": "官服",
+            "name": "星神少女",
             "path": [
                 "{PROJECT_DIR}/resource/base"
-            ]
-        },
-        {
-            "name": "B 服",
-            "path": [
-                "{PROJECT_DIR}/resource/base",
-                "{PROJECT_DIR}/resource/bilibili"
             ]
         }
     ],
     "task": [
         {
-            "name": "普通任务",
-            "entry": "MyTask1"
+            "name": "循环收集情欲因子",
+            "entry": "情欲因子_loop_5min"
         },
         {
-            "name": "选项任务",
-            "entry": "MyTask2",
-            "option": [
-                "任务选项1"
-            ]
+            "name": "收集情欲因子",
+            "entry": "情欲因子"
         },
         {
-            "name": "参数任务",
-            "entry": "MyTask3",
-            "option": [
-                "任务选项1"
-            ],
-            "param": {}
+            "name": "领取体力补给",
+            "entry": "领取体力补给"
+        },
+        {
+            "name": "领取冥河探索收益",
+            "entry": "领取冥河探索收益"
+        },
+        {
+            "name": "领取任务派遣奖励",
+            "entry": "领取任务派遣奖励"
+        },
+        {
+            "name": "进行任务派遣",
+            "entry": "进行任务派遣"
+        },
+        {
+            "name": "进行祭祀",
+            "entry": "进行祭祀"
+        },
+        {
+            "name": "银河铁道登车",
+            "entry": "银河铁道登车"
+        },
+        {
+            "name": "银河铁道赞助",
+            "entry": "银河铁道赞助"
+        },
+        {
+            "name": "cg活动每日免费币",
+            "entry": "cg活动每日免费币"
+        },
+        {
+            "name": "和使徒交谈",
+            "entry": "和使徒交谈"
+        },
+        {
+            "name": "每日斗技场",
+            "entry": "每日斗技场"
+        },
+        {
+            "name": "每日皇者争锋",
+            "entry": "每日皇者争锋"
+        },
+        {
+            "name": "每日星神再会",
+            "entry": "每日星神再会"
+        },
+        {
+            "name": "领取每日任务奖励",
+            "entry": "领取每日任务奖励"
+        },
+        {
+            "name": "每日免费造型召唤",
+            "entry": "每日免费造型召唤"
+        },
+        {
+            "name": "每日免费星空轮回",
+            "entry": "每日免费星空轮回"
+        },
+        {
+            "name": "每日诸神回归",
+            "entry": "每日诸神回归"
+        },
+        {
+            "name": "买空公会商店",
+            "entry": "买空公会商店"
         }
-    ],
-    "option": {
-        "任务选项1": {
-            "cases": [
-                {
-                    "name": "文本1",
-                    "param": {
-                        "OcrTask": {
-                            "text": "文本1"
-                        }
-                    }
-                },
-                {
-                    "name": "文本2",
-                    "param": {
-                        "OcrTask": {
-                            "text": "文本2"
-                        }
-                    }
-                }
-            ]
-        }
-    }
+    ]
 }

@@ -1,0 +1,96 @@
+{
+    "每日十二星宫": {
+        "next": [
+            "判断十二星宫是否完成并继续",
+            "判断是否在自动挑战设置界面并继续_sub",
+            "判断已完成挑战界面并开启新挑战_sub",
+            "判断是否在十二星宫开始挑战界面并开启自动挑战_sub",
+            "检测是否在远征界面并进入十二星宫界面_sub",
+            "检测是否在主界面并进入远征界面_sub",
+            "检测进入主界面图标并点击_sub",
+            "检测返回图标并点击_sub",
+            "检测关闭图标并点击_sub",
+            "检测点击任意位置继续游戏并点击_sub",
+            "重启游戏_sub"
+        ]
+    },
+    "判断十二星宫是否完成并继续": {
+        "recognition": "OCR",
+        "expected": "神秘的星宫宝箱",
+        "action": "Click",
+        "target": [
+            563,
+            347,
+            149,
+            133
+        ],
+        "next": [
+            "购买十二星宫的兽神碎片"
+        ]
+    },
+    "购买十二星宫的兽神碎片": {
+        "action": "Click",
+        "target": [
+            219,
+            552,
+            138,
+            42
+        ]
+    },
+    "判断已完成挑战界面并开启新挑战_sub": {
+        "recognition": "OCR",
+        "expected": "已完成挑战",
+        "action": "Click",
+        "target": [
+            548,
+            610,
+            188,
+            41
+        ],
+        "is_sub": true
+    },
+    "判断是否在十二星宫开始挑战界面并开启自动挑战_sub": {
+        "recognition": "OCR",
+        "expected": "换一批3次",
+        "action": "Click",
+        "target": [
+            1195,
+            625,
+            48,
+            42
+        ],
+        "is_sub": true,
+        "post_wait_freezes": 2000
+    },
+    "判断是否在自动挑战设置界面并继续_sub": {
+        "recognition": "OCR",
+        "expected": "自动挑战设置",
+        "action": "Click",
+        "target": [
+            551,
+            541,
+            173,
+            35
+        ],
+        "post_wait_freezes": 10000,
+        "is_sub": true
+    },
+    "检测是否在远征界面并进入十二星宫界面_sub": {
+        "recognition": "OCR",
+        "expected": "远征",
+        "roi": [
+            50,
+            0,
+            196,
+            141
+        ],
+        "action": "Click",
+        "target": [
+            934,
+            260,
+            205,
+            67
+        ],
+        "is_sub": true
+    }
+}

@@ -1,0 +1,196 @@
+{
+    "每日诸神回归": {
+        "next": [
+            "判断是否在诸神回归界面并继续",
+            "判断是否在公会活动界面并进入诸神回归_sub",
+            "判断是否在公会界面并进入公会活动界面_sub",
+            "判断是否在主界面并进入公会界面_sub",
+            "检测进入主界面图标并点击_sub",
+            "检测返回图标并点击_sub",
+            "检测关闭图标并点击_sub",
+            "检测点击任意位置继续游戏并点击_sub",
+            "重启游戏_sub"
+        ]
+    },
+    "判断是否在公会活动界面并进入诸神回归_sub": {
+        "recognition": "OCR",
+        "expected": "公会活动",
+        "roi": [
+            51,
+            0,
+            260,
+            142
+        ],
+        "next": [
+            "进入诸神回归"
+        ],
+        "is_sub": true
+    },
+    "进入诸神回归": {
+        "recognition": "OCR",
+        "expected": "诸神回归",
+        "action": "Click",
+        "post_delay": 10000
+    },
+    "判断是否在诸神回归界面并继续": {
+        "recognition": "OCR",
+        "expected": "诸神回归",
+        "roi": [
+            48,
+            0,
+            263,
+            141
+        ],
+        "next": [
+            "等待诸神回归开始_sub",
+            "等待诸神回归讨伐界面加载_sub",
+            "准备进入诸神回归第一次讨伐"
+        ]
+    },
+    "等待诸神回归开始_sub": {
+        "recognition": "OCR",
+        "expected": "活动倒数",
+        "is_sub": true,
+        "post_delay": 5000
+    },
+    "等待诸神回归讨伐界面加载_sub": {
+        "recognition": "OCR",
+        "expected": "可讨伐",
+        "inverse": true,
+        "is_sub": true
+    },
+    "准备进入诸神回归第一次讨伐": {
+        "next": [
+            "点击诸神回归讨伐_sub",
+            "判断诸神回归进入第一次讨伐成功并继续"
+        ]
+    },
+    "点击诸神回归讨伐_sub": {
+        "recognition": "OCR",
+        "expected": "可讨伐",
+        "action": "Click",
+        "is_sub": true
+    },
+    "判断诸神回归进入第一次讨伐成功并继续": {
+        "recognition": "OCR",
+        "expected": "失败",
+        "inverse": true,
+        "next": [
+            "判断是否进入诸神回归第二阶段并进行第二次讨伐",
+            "等待进入诸神回归战斗界面_sub",
+            "判断是否进入诸神回归战斗界面并结束战斗_sub"
+        ]
+    },
+    "等待进入诸神回归战斗界面_sub": {
+        "recognition": "TemplateMatch",
+        "template": "跳过战斗图标.png",
+        "inverse": true,
+        "is_sub": true
+    },
+    "判断是否进入诸神回归战斗界面并结束战斗_sub": {
+        "recognition": "TemplateMatch",
+        "template": "跳过战斗图标.png",
+        "green_mask": true,
+        "action": "Click",
+        "is_sub": true,
+        "next": [
+            "判断是否进入诸神回归战斗界面并结束战斗_sub",
+            "判断诸神回归战斗是否结束_sub",
+            "点击诸神回归战斗结束界面右下角"
+        ]
+    },
+    "判断诸神回归战斗是否结束_sub": {
+        "recognition": "OCR",
+        "expected": "成功获得",
+        "inverse": true,
+        "is_sub": true
+    },
+    "点击诸神回归战斗结束界面右下角": {
+        "action": "Click",
+        "target": [
+            1170,
+            643,
+            46,
+            42
+        ],
+        "pre_delay": 2000
+    },
+    "判断是否进入诸神回归第二阶段并进行第二次讨伐": {
+        "recognition": "TemplateMatch",
+        "template": "诸神回归第二阶段标志.png",
+        "green_mask": true,
+        "next": [
+            "判断诸神回归是否可讨伐_sub",
+            "准备进入诸神回归第二阶段讨伐"
+        ]
+    },
+    "准备进入诸神回归第二阶段讨伐": {
+        "next": [
+            "点击诸神回归讨伐_sub",
+            "判断诸神回归进入第二次讨伐成功并继续"
+        ]
+    },
+    "判断诸神回归是否可讨伐_sub": {
+        "recognition": "OCR",
+        "expected": "可讨伐",
+        "inverse": true,
+        "is_sub": true
+    },
+    "判断诸神回归进入第二次讨伐成功并继续": {
+        "recognition": "OCR",
+        "expected": "失败",
+        "inverse": true,
+        "next": [
+            "判断是否进入诸神回归第三阶段并进行第三次和第四次讨伐",
+            "等待进入诸神回归战斗界面_sub",
+            "判断是否进入诸神回归战斗界面并结束战斗_sub"
+        ]
+    },
+    "判断是否进入诸神回归第三阶段并进行第三次和第四次讨伐": {
+        "recognition": "TemplateMatch",
+        "template": "诸神回归第三阶段标志.png",
+        "green_mask": true,
+        "next": [
+            "判断诸神回顾活动是否结束1",
+            "判断诸神回顾活动是否结束2",
+            "判断是否可讨伐并进行讨伐_sub",
+            "等待诸神回归活动结束_sub"
+        ]
+    },
+    "判断是否可讨伐并进行讨伐_sub": {
+        "recognition": "OCR",
+        "expected": "可讨伐",
+        "next": [
+            "点击诸神回归讨伐_sub",
+            "等待进入诸神回归战斗界面_sub",
+            "判断是否进入诸神回归战斗界面并结束战斗"
+        ],
+        "is_sub": true
+    },
+    "等待诸神回归活动结束_sub": {
+        "recognition": "TemplateMatch",
+        "template": "诸神回归第三阶段标志.png",
+        "green_mask": true,
+        "is_sub": true
+    },
+    "判断诸神回顾活动是否结束1": {
+        "recognition": "OCR",
+        "expected": "前往拍卖",
+        "action": "Click",
+        "target": true
+    },
+    "判断诸神回顾活动是否结束2": {
+        "recognition": "OCR",
+        "expected": "活动倒数"
+    },
+    "判断是否进入诸神回归战斗界面并结束战斗": {
+        "recognition": "TemplateMatch",
+        "template": "跳过战斗图标.png",
+        "green_mask": true,
+        "action": "Click",
+        "next": [
+            "判断诸神回归战斗是否结束_sub",
+            "点击诸神回归战斗结束界面右下角"
+        ]
+    }
+}

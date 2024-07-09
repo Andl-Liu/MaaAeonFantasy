@@ -1,0 +1,210 @@
+{
+    "每日斗技场": {
+        "next": [
+            "检测购买挑战次数",
+            "判断是否在斗技场界面并点击战5次_sub",
+            "判断是否在奥林匹斯竞技界面并进入斗技场界面_sub",
+            "判断是否在主界面并进入竞技界面_sub",
+            "检测进入主界面图标并点击_sub",
+            "检测返回图标并点击_sub",
+            "检测关闭图标并点击_sub",
+            "检测点击任意位置继续游戏并点击_sub",
+            "重启游戏_sub"
+        ]
+    },
+    "每日皇者争锋": {
+        "next": [
+            "判断皇者争锋任务是否完成",
+            "判断是否在皇者争锋奖励界面并继续_sub",
+            "判断是否在皇者争锋界面并继续_sub",
+            "判断是否在奥林匹斯竞技界面并进入皇者争锋界面_sub",
+            "判断是否在积分变化界面并继续_sub",
+            "判断是否在主界面并进入竞技界面_sub",
+            "检测进入主界面图标并点击_sub",
+            "检测返回图标并点击_sub",
+            "检测关闭图标并点击_sub",
+            "检测点击任意位置继续游戏并点击_sub",
+            "重启游戏_sub"
+        ]
+    },
+    "检测购买挑战次数": {
+        "recognition": "OCR",
+        "expected": "购买挑战次数",
+        "roi": [
+            472,
+            128,
+            333,
+            160
+        ]
+    },
+    "判断是否在斗技场界面并点击战5次_sub": {
+        "recognition": "OCR",
+        "expected": "斗技场",
+        "roi": [
+            49,
+            0,
+            234,
+            136
+        ],
+        "next": [
+            "点击战5次"
+        ],
+        "post_delay": 2000,
+        "is_sub": true
+    },
+    "点击战5次": {
+        "recognition": "OCR",
+        "expected": "战5次",
+        "action": "Click"
+    },
+    "判断是否在奥林匹斯竞技界面并进入斗技场界面_sub": {
+        "recognition": "OCR",
+        "expected": "奥林匹斯竞技",
+        "roi": [
+            51,
+            0,
+            321,
+            144
+        ],
+        "next": [
+            "进入斗技场界面"
+        ],
+        "is_sub": true
+    },
+    "判断是否在奥林匹斯竞技界面并进入皇者争锋界面_sub": {
+        "recognition": "OCR",
+        "expected": "奥林匹斯竞技",
+        "roi": [
+            51,
+            0,
+            321,
+            144
+        ],
+        "next": [
+            "进入皇者争锋界面"
+        ],
+        "is_sub": true
+    },
+    "进入斗技场界面": {
+        "recognition": "OCR",
+        "expected": "斗技场",
+        "action": "Click",
+        "post_delay": 2000
+    },
+    "进入皇者争锋界面": {
+        "recognition": "OCR",
+        "expected": "皇者争锋",
+        "action": "Click",
+        "post_delay": 2000
+    },
+    "判断皇者争锋任务是否完成": {
+        "recognition": "TemplateMatch",
+        "template": "皇者争锋领取完成标志.png",
+        "green_mask": true
+    },
+    "判断是否在主界面并进入竞技界面_sub": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            1074,
+            0,
+            206,
+            153
+        ],
+        "template": "主界面图标.png",
+        "green_mask": true,
+        "action": "Click",
+        "target": [
+            1157,
+            478,
+            67,
+            53
+        ],
+        "post_delay": 1000,
+        "is_sub": true
+    },
+    "判断是否在皇者争锋界面并继续_sub": {
+        "recognition": "OCR",
+        "expected": "皇者争锋",
+        "roi": [
+            52,
+            0,
+            255,
+            139
+        ],
+        "next": [
+            "进行匹配"
+        ],
+        "is_sub": true
+    },
+    "进行匹配": {
+        "recognition": "OCR",
+        "expected": "匹配",
+        "action": "Click",
+        "post_delay": 5000,
+        "next": [
+            "竞技场战斗"
+        ]
+    },
+    "竞技场战斗": {
+        "next": [
+            "检测匹配按钮并进入皇者争锋奖励界面",
+            "检测点击任意位置继续游戏并点击_5000_sub",
+            "点击右下角_1000_sub"
+        ]
+    },
+    "检测匹配按钮并进入皇者争锋奖励界面": {
+        "recognition": "OCR",
+        "expected": "匹配",
+        "roi": [
+            1059,
+            580,
+            193,
+            140
+        ],
+        "next": [
+            "进入皇者争锋奖励界面"
+        ]
+    },
+    "进入皇者争锋奖励界面": {
+        "action": "Click",
+        "target": [
+            941,
+            636,
+            47,
+            43
+        ]
+    },
+    "判断是否在皇者争锋奖励界面并继续_sub": {
+        "recognition": "OCR",
+        "expected": "皇者争锋挑战5次",
+        "next": [
+            "领取皇者争锋奖励_sub",
+            "检测关闭图标并点击"
+        ],
+        "is_sub": true
+    },
+    "领取皇者争锋奖励_sub": {
+        "recognition": "TemplateMatch",
+        "template": "领取皇者争锋奖励按钮.png",
+        "roi": [
+            920,
+            99,
+            280,
+            507
+        ],
+        "action": "Click",
+        "is_sub": true
+    },
+    "判断是否在积分变化界面并继续_sub": {
+        "recognition": "OCR",
+        "expected": "积分变化",
+        "action": "Click",
+        "target": [
+            1170,
+            643,
+            46,
+            42
+        ],
+        "is_sub": true
+    }
+}

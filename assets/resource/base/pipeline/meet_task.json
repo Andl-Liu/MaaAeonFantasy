@@ -1,0 +1,159 @@
+{
+    "进行再会1_sub": {
+        "recognition": "OCR",
+        "expected": "阿波罗",
+        "action": "Click",
+        "target_offset": [
+            0,
+            72,
+            0,
+            0
+        ],
+        "post_delay": 5000,
+        "next": [
+            "检测跳过整章按钮并点击_sub",
+            "检测是否在恭喜获得画面并继续"
+        ],
+        "is_sub": true
+    },
+    "进行再会2_sub": {
+        "recognition": "OCR",
+        "expected": "修普诺斯",
+        "action": "Click",
+        "target_offset": [
+            0,
+            72,
+            0,
+            0
+        ],
+        "post_delay": 5000,
+        "next": [
+            "检测跳过整章按钮并点击_sub",
+            "检测是否在恭喜获得画面并继续"
+        ],
+        "is_sub": true
+    },
+    "进行再会3_sub": {
+        "recognition": "OCR",
+        "expected": "泊瑟芬",
+        "action": "Click",
+        "target_offset": [
+            0,
+            72,
+            0,
+            0
+        ],
+        "post_delay": 5000,
+        "next": [
+            "检测跳过整章按钮并点击_sub",
+            "检测是否在恭喜获得画面并继续"
+        ],
+        "is_sub": true
+    },
+    "每日星神再会": {
+        "next": [
+            "判断是否在再会界面并进行再会",
+            "判断是否在行动记录界面并进入再会界面_sub",
+            "判断是否在主线界面并进入行动记录界面_sub",
+            "判断是否在主界面并进入主线界面_sub",
+            "检测返回图标并点击_sub",
+            "检测关闭图标并点击_sub",
+            "检测点击任意位置继续游戏并点击_sub",
+            "重启游戏_sub"
+        ]
+    },
+    "判断是否在再会界面并进行再会": {
+        "recognition": "TemplateMatch",
+        "template": "再会界面标志.png",
+        "next": [
+            "判断再会次数是否用完",
+            "进行再会1_sub",
+            "进行再会2_sub",
+            "进行再会3_sub",
+            "再会界面向下滑动一行_sub"
+        ]
+    },
+    "判断再会次数是否用完": {
+        "recognition": "OCR",
+        "expected": "今日再会剩余次数：0"
+    },
+    "再会界面向下滑动一行_sub": {
+        "action": "Swipe",
+        "begin": [
+            578,
+            520,
+            21,
+            21
+        ],
+        "end": [
+            577,
+            390,
+            22,
+            23
+        ],
+        "post_delay": 2000,
+        "is_sub": true
+    },
+    "检测跳过整章按钮并点击_sub": {
+        "recognition": "OCR",
+        "expected": "跳过整章",
+        "action": "Click",
+        "post_delay": 5000,
+        "is_sub": true
+    },
+    "判断是否在行动记录界面并进入再会界面_sub": {
+        "recognition": "OCR",
+        "expected": "行动记录",
+        "roi": [
+            49,
+            0,
+            261,
+            144
+        ],
+        "action": "Click",
+        "target": [
+            67,
+            228,
+            103,
+            39
+        ],
+        "is_sub": true
+    },
+    "判断是否在主线界面并进入行动记录界面_sub": {
+        "recognition": "OCR",
+        "expected": "主线",
+        "roi": [
+            49,
+            0,
+            203,
+            145
+        ],
+        "action": "Click",
+        "target": [
+            48,
+            591,
+            57,
+            50
+        ],
+        "is_sub": true
+    },
+    "判断是否在主界面并进入主线界面_sub": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            1074,
+            0,
+            206,
+            153
+        ],
+        "template": "主界面图标.png",
+        "green_mask": true,
+        "action": "Click",
+        "target": [
+            1091,
+            297,
+            107,
+            94
+        ],
+        "is_sub": true
+    }
+}

@@ -1,0 +1,98 @@
+{
+    "领取体力补给": {
+        "next": [
+            "检测是否在体力补给页面并点击领取",
+            "检测体力补给站并进入_sub",
+            "检测活动页并点击福利_sub",
+            "检测是否在主界面并点击活动图标_sub",
+            "检测进入主界面图标并点击_sub",
+            "检测返回图标并点击_sub",
+            "检测关闭图标并点击_sub",
+            "检测点击任意位置继续游戏并点击_sub",
+            "重启游戏_sub"
+        ]
+    },
+    "检测是否在体力补给页面并点击领取": {
+        "recognition": "OCR",
+        "expected": "午间补给时间",
+        "next": [
+            "点击领取体力补给",
+            "点击补领体力补给",
+            "没有检测到领取"
+        ]
+    },
+    "点击补领体力补给": {
+        "recognition": "OCR",
+        "expected": "补领",
+        "action": "Click",
+        "next": [
+            "点击确认补领体力"
+        ]
+    },
+    "点击确认补领体力": {
+        "recognition": "OCR",
+        "expected": "确认",
+        "action": "Click"
+    },
+    "点击领取体力补给": {
+        "recognition": "TemplateMatch",
+        "template": "领取体力补给按钮.png",
+        "action": "Click",
+        "next": [
+            "检测是否在恭喜获得画面并继续"
+        ]
+    },
+    "没有检测到领取": {
+        "recognition": "OCR",
+        "expected": "领取",
+        "inverse": true
+    },
+    "检测体力补给站并进入_sub": {
+        "recognition": "OCR",
+        "expected": "体力补给站",
+        "action": "Click",
+        "is_sub": true,
+        "post_delay": 1000
+    },
+    "检测活动页并点击福利_sub": {
+        "recognition": "OCR",
+        "expected": "活动页",
+        "next": [
+            "检测福利并点击"
+        ],
+        "is_sub": true
+    },
+    "检测福利并点击": {
+        "recognition": "OCR",
+        "expected": "福利",
+        "action": "Click"
+    },
+    "检测是否在主界面并点击活动图标_sub": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            1074,
+            0,
+            206,
+            153
+        ],
+        "template": "主界面图标.png",
+        "green_mask": true,
+        "next": [
+            "点击活动图标"
+        ],
+        "is_sub": true
+    },
+    "点击活动图标": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            158,
+            122,
+            191,
+            189
+        ],
+        "template": "活动图标.png",
+        "post_delay": 2000,
+        "green_mask": true,
+        "action": "Click"
+    }
+}

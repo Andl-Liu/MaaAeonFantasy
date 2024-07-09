@@ -1,0 +1,152 @@
+{
+    "每日免费造型召唤": {
+        "next": [
+            "判断是否在造型召唤界面并继续",
+            "判断是否在主界面并进入造型召唤界面_sub",
+            "检测进入主界面图标并点击_sub",
+            "检测返回图标并点击_sub",
+            "检测关闭图标并点击_sub",
+            "检测点击任意位置继续游戏并点击_sub",
+            "重启游戏_sub"
+        ]
+    },
+    "每日免费星空轮回": {
+        "next": [
+            "判断是否在星空轮回界面并继续",
+            "判断是否在主界面并进入星空轮回界面_sub",
+            "检测进入主界面图标并点击_sub",
+            "检测返回图标并点击_sub",
+            "检测关闭图标并点击_sub",
+            "检测点击任意位置继续游戏并点击_sub",
+            "重启游戏_sub"
+        ]
+    },
+    "判断是否在造型召唤界面并继续": {
+        "recognition": "OCR",
+        "expected": "造型召唤",
+        "roi": [
+            49,
+            0,
+            262,
+            140
+        ],
+        "next": [
+            "抽取免费次数_造型召唤",
+            "未检测到免费次数_造型召唤"
+        ]
+    },
+    "抽取免费次数_造型召唤": {
+        "recognition": "OCR",
+        "expected": "免费",
+        "roi": [
+            726,
+            630,
+            185,
+            55
+        ],
+        "action": "Click",
+        "post_delay": 5000
+    },
+    "未检测到免费次数_造型召唤": {
+        "recognition": "OCR",
+        "expected": "免费",
+        "roi": [
+            726,
+            630,
+            185,
+            55
+        ],
+        "inverse": true
+    },
+    "判断是否在主界面并进入造型召唤界面_sub": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            1074,
+            0,
+            206,
+            153
+        ],
+        "template": "主界面图标.png",
+        "green_mask": true,
+        "next": [
+            "进入造型召唤界面",
+            "没有识别到造型召唤界面"
+        ],
+        "is_sub": true
+    },
+    "进入造型召唤界面": {
+        "recognition": "OCR",
+        "expected": "造型召唤",
+        "action": "Click"
+    },
+    "没有识别到造型召唤界面": {
+        "recognition": "OCR",
+        "expected": "造型召唤",
+        "inverse": true,
+        "action": "StopTask"
+    },
+    "判断是否在星空轮回界面并继续": {
+        "recognition": "OCR",
+        "expected": "星空轮回",
+        "roi": [
+            49,
+            0,
+            262,
+            140
+        ],
+        "next": [
+            "抽取免费次数_星空轮回",
+            "未检测到免费次数_星空轮回"
+        ]
+    },
+    "抽取免费次数_星空轮回": {
+        "recognition": "OCR",
+        "expected": "免费",
+        "roi": [
+            427,
+            643,
+            165,
+            55
+        ],
+        "action": "Click",
+        "post_delay": 5000
+    },
+    "未检测到免费次数_星空轮回": {
+        "recognition": "OCR",
+        "expected": "免费",
+        "roi": [
+            427,
+            643,
+            165,
+            55
+        ],
+        "inverse": true
+    },
+    "判断是否在主界面并进入星空轮回界面_sub": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            1074,
+            0,
+            206,
+            153
+        ],
+        "template": "主界面图标.png",
+        "green_mask": true,
+        "next": [
+            "进入星空轮回界面",
+            "没有识别到星空轮回界面"
+        ],
+        "is_sub": true
+    },
+    "进入星空轮回界面": {
+        "recognition": "OCR",
+        "expected": "星空轮回",
+        "action": "Click"
+    },
+    "没有识别到星空轮回界面": {
+        "recognition": "OCR",
+        "expected": "星空轮回",
+        "inverse": true,
+        "action": "StopTask"
+    }
+}

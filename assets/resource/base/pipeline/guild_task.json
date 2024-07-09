@@ -1,0 +1,445 @@
+{
+    "进行祭祀": {
+        "next": [
+            "判断是否在公会祭祀界面并祭祀",
+            "判断是否在公会界面并进入公会祭祀界面_sub",
+            "判断是否在主界面并进入公会界面_sub",
+            "检测进入主界面图标并点击_sub",
+            "检测返回图标并点击_sub",
+            "检测关闭图标并点击_sub",
+            "检测点击任意位置继续游戏并点击_sub",
+            "重启游戏_sub"
+        ]
+    },
+    "银河铁道登车": {
+        "next": [
+            "检测是否在银河铁道铁道界面并登车",
+            "判断是否在公会活动界面并进入银河铁道_sub",
+            "判断是否在公会界面并进入公会活动界面_sub",
+            "判断是否在主界面并进入公会界面_sub",
+            "检测进入主界面图标并点击_sub",
+            "检测返回图标并点击_sub",
+            "检测关闭图标并点击_sub",
+            "检测点击任意位置继续游戏并点击_sub",
+            "重启游戏_sub"
+        ]
+    },
+    "银河铁道赞助": {
+        "next": [
+            "检测是否在银河铁道铁道界面并赞助",
+            "判断是否在公会活动界面并进入银河铁道_sub",
+            "判断是否在公会界面并进入公会活动界面_sub",
+            "判断是否在主界面并进入公会界面_sub",
+            "检测进入主界面图标并点击_sub",
+            "检测返回图标并点击_sub",
+            "检测关闭图标并点击_sub",
+            "检测点击任意位置继续游戏并点击_sub",
+            "重启游戏_sub"
+        ]
+    },
+    "买空公会商店": {
+        "next": [
+            "判断是否在公会商店并购买商品1",
+            "判断是否在公会界面并进入公会商店界面_sub",
+            "判断是否在主界面并进入公会界面_sub",
+            "检测进入主界面图标并点击_sub",
+            "检测返回图标并点击_sub",
+            "检测关闭图标并点击_sub",
+            "检测点击任意位置继续游戏并点击_sub",
+            "重启游戏_sub"
+        ]
+    },
+    "判断是否在公会商店并购买商品1": {
+        "recognition": "OCR",
+        "expected": "公会商店",
+        "roi": [
+            53,
+            0,
+            252,
+            140
+        ],
+        "next": [
+            "确认商品1已购买并购买商品2",
+            "检测确认购买商品并继续_sub",
+            "点击购买商品1_sub"
+        ]
+    },
+    "点击购买商品1_sub": {
+        "action": "Click",
+        "target": [
+            587,
+            178,
+            215,
+            93
+        ],
+        "is_sub": true,
+        "post_delay": 2000
+    },
+    "确认商品1已购买并购买商品2": {
+        "recognition": "OCR",
+        "expected": "GET",
+        "roi": [
+            688,
+            209,
+            144,
+            84
+        ],
+        "next": [
+            "确认商品2已购买并购买商品3",
+            "检测确认购买商品并继续_sub",
+            "点击购买商品2_sub"
+        ]
+    },
+    "点击购买商品2_sub": {
+        "action": "Click",
+        "target": [
+            897,
+            163,
+            307,
+            120
+        ],
+        "is_sub": true,
+        "post_delay": 2000
+    },
+    "确认商品2已购买并购买商品3": {
+        "recognition": "OCR",
+        "expected": "GET",
+        "roi": [
+            1082,
+            216,
+            121,
+            77
+        ],
+        "next": [
+            "确认商品3已购买并购买商品4",
+            "检测确认购买商品并继续_sub",
+            "点击购买商品3_sub"
+        ]
+    },
+    "点击购买商品3_sub": {
+        "action": "Click",
+        "target": [
+            513,
+            339,
+            313,
+            129
+        ],
+        "is_sub": true,
+        "post_delay": 2000
+    },
+    "确认商品3已购买并购买商品4": {
+        "recognition": "OCR",
+        "expected": "GET",
+        "roi": [
+            705,
+            405,
+            114,
+            70
+        ],
+        "next": [
+            "确认商品4已购买并购买商品5",
+            "检测确认购买商品并继续_sub",
+            "点击购买商品4_sub"
+        ]
+    },
+    "点击购买商品4_sub": {
+        "action": "Click",
+        "target": [
+            899,
+            343,
+            306,
+            127
+        ],
+        "is_sub": true,
+        "post_delay": 2000
+    },
+    "确认商品4已购买并购买商品5": {
+        "recognition": "OCR",
+        "expected": "GET",
+        "roi": [
+            1080,
+            407,
+            113,
+            68
+        ],
+        "next": [
+            "确认商品5已购买并购买商品6",
+            "检测确认购买商品并继续_sub",
+            "点击购买商品5_sub"
+        ]
+    },
+    "点击购买商品5_sub": {
+        "action": "Click",
+        "target": [
+            509,
+            525,
+            319,
+            127
+        ],
+        "is_sub": true,
+        "post_delay": 2000
+    },
+    "确认商品5已购买并购买商品6": {
+        "recognition": "OCR",
+        "expected": "GET",
+        "roi": [
+            707,
+            588,
+            111,
+            74
+        ],
+        "next": [
+            "确认商品6已购买并结束购买",
+            "检测确认购买商品并继续_sub",
+            "点击购买商品6_sub"
+        ]
+    },
+    "点击购买商品6_sub": {
+        "action": "Click",
+        "target": [
+            891,
+            524,
+            312,
+            129
+        ],
+        "is_sub": true,
+        "post_delay": 2000
+    },
+    "确认商品6已购买并结束购买": {
+        "recognition": "OCR",
+        "expected": "GET",
+        "roi": [
+            1076,
+            590,
+            124,
+            68
+        ]
+    },
+    "检测商品已购买": {
+        "recognition": "OCR",
+        "expected": "商品已购买"
+    },
+    "检测确认购买商品并继续_sub": {
+        "recognition": "OCR",
+        "expected": "确定购买商品",
+        "action": "Click",
+        "target": [
+            681,
+            481,
+            110,
+            38
+        ],
+        "is_sub": true
+    },
+    "判断是否在公会祭祀界面并祭祀": {
+        "recognition": "OCR",
+        "expected": "公会祭祀",
+        "roi": [
+            60,
+            18,
+            236,
+            135
+        ],
+        "next": [
+            "点击祭祀按钮"
+        ]
+    },
+    "点击祭祀按钮": {
+        "action": "Click",
+        "target": [
+            203,
+            525,
+            129,
+            37
+        ],
+        "post_delay": 1000,
+        "next": [
+            "检测是否有剩余免费次数",
+            "点击确定祭祀按钮"
+        ]
+    },
+    "检测是否有剩余免费次数": {
+        "recognition": "OCR",
+        "expected": "剩余免费5次",
+        "inverse": true
+    },
+    "点击确定祭祀按钮": {
+        "recognition": "OCR",
+        "expected": "确定",
+        "action": "Click",
+        "next": [
+            "检测是否在恭喜获得画面并继续"
+        ]
+    },
+    "判断是否在公会界面并进入公会商店界面_sub": {
+        "recognition": "TemplateMatch",
+        "template": "公会.png",
+        "roi": [
+            44,
+            0,
+            338,
+            145
+        ],
+        "next": [
+            "进入公会商店界面"
+        ],
+        "is_sub": true
+    },
+    "判断是否在公会界面并进入公会祭祀界面_sub": {
+        "recognition": "TemplateMatch",
+        "template": "公会.png",
+        "roi": [
+            44,
+            0,
+            338,
+            145
+        ],
+        "next": [
+            "进入祭祀界面"
+        ],
+        "is_sub": true
+    },
+    "进入祭祀界面": {
+        "recognition": "OCR",
+        "expected": "祭祀",
+        "action": "Click"
+    },
+    "判断是否在主界面并进入公会界面_sub": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            1074,
+            0,
+            206,
+            153
+        ],
+        "template": "主界面图标.png",
+        "green_mask": true,
+        "next": [
+            "进入公会界面"
+        ],
+        "is_sub": true
+    },
+    "进入公会界面": {
+        "recognition": "TemplateMatch",
+        "template": "公会图标.png",
+        "green_mask": true,
+        "action": "Click",
+        "post_delay": 1000
+    },
+    "检测是否在银河铁道铁道界面并登车": {
+        "recognition": "OCR",
+        "expected": "银河铁道",
+        "roi": [
+            51,
+            0,
+            258,
+            142
+        ],
+        "next": [
+            "判断是否还在登车期",
+            "点击登车",
+            "登车失败"
+        ]
+    },
+    "检测是否在银河铁道铁道界面并赞助": {
+        "recognition": "OCR",
+        "expected": "银河铁道",
+        "roi": [
+            51,
+            0,
+            258,
+            142
+        ],
+        "next": [
+            "判断是否还在登车期",
+            "点击赞助",
+            "赞助失败"
+        ]
+    },
+    "赞助失败": {},
+    "登车失败": {},
+    "判断是否还在登车期": {
+        "recognition": "OCR",
+        "expected": "距离开始",
+        "inverse": true
+    },
+    "点击登车": {
+        "recognition": "OCR",
+        "expected": "登车",
+        "action": "Click"
+    },
+    "判断是否在公会界面并进入公会活动界面_sub": {
+        "recognition": "TemplateMatch",
+        "template": "公会.png",
+        "roi": [
+            44,
+            0,
+            338,
+            145
+        ],
+        "next": [
+            "进入公会活动界面"
+        ],
+        "is_sub": true
+    },
+    "进入公会活动界面": {
+        "recognition": "OCR",
+        "expected": "活动",
+        "action": "Click"
+    },
+    "判断是否在公会活动界面并进入银河铁道_sub": {
+        "recognition": "OCR",
+        "expected": "公会活动",
+        "roi": [
+            51,
+            0,
+            260,
+            142
+        ],
+        "next": [
+            "进入银河铁道"
+        ],
+        "is_sub": true
+    },
+    "进入银河铁道": {
+        "recognition": "OCR",
+        "expected": "银河铁道",
+        "action": "Click"
+    },
+    "点击赞助": {
+        "action": "Click",
+        "target": [
+            1143,
+            606,
+            71,
+            65
+        ],
+        "next": [
+            "检测是否有赞助窗口",
+            "检测是否有确认赞助按钮并点击",
+            "赞助失败"
+        ]
+    },
+    "检测是否有赞助窗口": {
+        "recognition": "OCR",
+        "expected": "赞助",
+        "roi": [
+            299,
+            113,
+            139,
+            88
+        ],
+        "inverse": true
+    },
+    "检测是否有确认赞助按钮并点击": {
+        "recognition": "TemplateMatch",
+        "template": "确认赞助按钮.png",
+        "action": "Click"
+    },
+    "进入公会商店界面": {
+        "recognition": "OCR",
+        "expected": "商店",
+        "action": "Click",
+        "post_delay": 2000
+    }
+}

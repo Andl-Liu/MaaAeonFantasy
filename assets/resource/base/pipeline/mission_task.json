@@ -1,0 +1,43 @@
+{
+    "领取每日任务奖励": {
+        "next": [
+            "判断是否在日常任务界面并领取奖励",
+            "判断是否在主界面并进入任务界面_sub",
+            "检测进入主界面图标并点击_sub",
+            "检测返回图标并点击_sub",
+            "检测关闭图标并点击_sub",
+            "检测点击任意位置继续游戏并点击_sub",
+            "重启游戏_sub"
+        ]
+    },
+    "判断是否在日常任务界面并领取奖励": {
+        "recognition": "TemplateMatch",
+        "template": "日常任务界面标志.png",
+        "action": "Click",
+        "target": [
+            1105,
+            629,
+            122,
+            34
+        ]
+    },
+    "判断是否在主界面并进入任务界面_sub": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            1074,
+            0,
+            206,
+            153
+        ],
+        "template": "主界面图标.png",
+        "green_mask": true,
+        "action": "Click",
+        "target": [
+            51,
+            203,
+            33,
+            30
+        ],
+        "is_sub": true
+    }
+}

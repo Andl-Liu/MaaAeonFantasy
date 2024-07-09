@@ -439,13 +439,6 @@ enc_temp_folder/*
 # Nuke
 .nuke/temp/*
 
-# Build
-deps
-build
-install
-
-# Tools
-tools/ImageCropper/**/*.png
-
-# Output
-output
+# Cache
+config
+debug
