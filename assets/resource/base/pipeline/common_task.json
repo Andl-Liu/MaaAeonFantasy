@@ -54,15 +54,23 @@
     "检测是否在恭喜获得画面并继续": {
         "recognition": "OCR",
         "expected": "恭喜获得",
-        "next": [
-            "点击任意位置继续游戏"
+        "action": "Click",
+        "target": [
+            1170,
+            643,
+            46,
+            42
         ]
     },
     "检测是否在恭喜获得画面并继续_sub": {
         "recognition": "OCR",
         "expected": "恭喜获得",
-        "next": [
-            "点击任意位置继续游戏"
+        "action": "Click",
+        "target": [
+            1170,
+            643,
+            46,
+            42
         ],
         "is_sub": true
     },

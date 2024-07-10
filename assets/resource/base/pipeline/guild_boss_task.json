@@ -85,6 +85,7 @@
         "recognition": "TemplateMatch",
         "template": "跳过战斗图标.png",
         "inverse": true,
+        "green_mask": true,
         "is_sub": true
     },
     "判断是否进入诸神回归战斗界面并结束战斗_sub": {

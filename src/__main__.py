@@ -58,11 +58,18 @@ async def select_device():
     if not device_list:
         print("No ADB device found.")
         exit()
-    # 遍历设备列表，打印设备编号和地址
+    # 遍历设备列表，打印设备编号和名称
     for i, device in enumerate(device_list):
-        print(f"{i}: {device.address}")
-    # 获取用户选择的设备编号
-    choice = int(input("Choose a device: "))
+        print(f"{i}: {device.name}")
+    # 获取用户选择的设备编号，判断用户输入是否合法
+    while True:
+        try:
+            choice = int(input("选择一个设备（输入编号并回车）: "))
+            if 0 <= choice < len(device_list):
+                break
+            print("Invalid device number.")
+        except ValueError:
+            print("Invalid input.")
     # 返回选择的设备
     return device_list[choice]
 
